@@ -2,6 +2,12 @@
 
 package that does it's best to guess the ccsid of a stream or file
 
+## References
+
+- [ASCII Basic Table](https://www.ascii-code.com/)
+- [EBCDIC Basic Table](https://www.lookuptables.com/text/ebcdic)
+- [UTF-8 Encoding](https://en.wikipedia.org/wiki/UTF-8)
+
 ## Build
 
 To build the code:

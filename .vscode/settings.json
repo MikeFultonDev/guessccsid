@@ -1,4 +1,4 @@
 {
-  "C_Cpp.default.compilerPath": "include:intinclude",
+  "C_Cpp.default.includePath": ["include"],
   "C_Cpp.default.defines": [ "VSCODE=1", "AMODE=64" ]
 }
