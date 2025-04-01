@@ -61,7 +61,8 @@ enum guessccsid_result guessccsid(const char* buffer, size_t len)
            * First byte of UTF8 2-byte character?
            * Only if no EBCDIC seen (these are letters A to I in EBCDIC)
            */
-          if (result == CCSID_ASCII) {
+
+          if (result == CCSID_ASCII || result == CCSID_UNK) {
             if ((i+1 < len) && ((buffer[i+1] & 0x80) == 0x80)) {
               ++i;
               result = CCSID_UTF8;
@@ -79,7 +80,7 @@ enum guessccsid_result guessccsid(const char* buffer, size_t len)
            * First byte of UTF8 3-byte character?
            * Only if no EBCDIC seen (these are letters S to Z in EBCDIC)
            */
-          if (result == CCSID_ASCII) {
+          if (result == CCSID_ASCII || result == CCSID_UNK) {
             if ((i+2 < len) && ((buffer[i+1] & 0x80) == 0x80) && ((buffer[i+2] & 0x80) == 0x80)) {
               i+=2;
               result = CCSID_UTF8;
@@ -97,7 +98,7 @@ enum guessccsid_result guessccsid(const char* buffer, size_t len)
           * First byte of UTF8 4-byte character?
           * Only if no EBCDIC seen (these are letters 0 to 9 in EBCDIC)
           */
-          if (result == CCSID_ASCII) {
+          if (result == CCSID_ASCII || result == CCSID_UNK) {
             if ((i+3 < len) && ((buffer[i+1] & 0x80) == 0x80) && ((buffer[i+2] & 0x80) == 0x80) && ((buffer[i+3] & 0x80) == 0x80)) {
               i+=3;
               result = CCSID_UTF8;
