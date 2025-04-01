@@ -59,6 +59,7 @@ int main(int argc, char* argv[])
     fprintf(stderr, "Unable to read file %s into buffer\n", file_name);
     return 24;
   }
+  fclose(fp);
 
   enum guessccsid_result result = guessccsid(buffer, size);
 
