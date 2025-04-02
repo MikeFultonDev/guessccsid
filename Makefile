@@ -11,14 +11,11 @@ programs := $(BINDIR)/guessccsid
 all: $(programs)
 	
 clean:
-	rm -f $(objects)
+	rm -f $(objects) $(cdeps) $(programs)
 
 $(BLDDIR)/%.d: $(SRCDIR)/%.c
 	mkdir -p $(BLDDIR) ; \
-	rm -f $@; \
-	clang -MM $(CPPFLAGS) $< > $@.$$$$; \
-	sed 's,\($*\)\.o[ :]*,\1.o $@ : ,g' < $@.$$$$ > $@; \
-	rm -f $@.$$$$
+	clang -MM -MT $@ $(CPPFLAGS) -MF $@ $<
 
 include $(cdeps)
 

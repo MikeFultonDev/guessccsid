@@ -2,6 +2,7 @@
 #include <stdbool.h>
 #include <stdio.h>
 
+
 enum guessccsid_result guessccsid(const char* buffer, size_t len)
 {
   enum guessccsid_result result = CCSID_UNK;
@@ -68,7 +69,8 @@ enum guessccsid_result guessccsid(const char* buffer, size_t len)
               result = CCSID_UTF8;
             } else {
               /*
-               * This is not valid UTF8 - it could be ASCII, or it could be binary.
+               * This is not valid UTF8 - it could be ASCII, or it could be binary
+               * or if it's still unknown, it could be EBCDIC.
                */
               result = CCSID_BINARY;
             }
@@ -86,7 +88,8 @@ enum guessccsid_result guessccsid(const char* buffer, size_t len)
               result = CCSID_UTF8;
             } else {
               /*
-               * This is not valid UTF8 - it could be ASCII, or it could be binary.
+               * This is not valid UTF8 - it could be ASCII, or it could be binary
+               * or if it's still unknown, it could be EBCDIC.
                */
               result = CCSID_BINARY;
             }
@@ -104,7 +107,8 @@ enum guessccsid_result guessccsid(const char* buffer, size_t len)
               result = CCSID_UTF8;
             } else {
               /*
-              * This is not valid UTF8 - it could be ASCII, or it could be binary.
+              * This is not valid UTF8 - it could be ASCII, or it could be binary               
+              * or if it's still unknown, it could be EBCDIC.
               */
               result = CCSID_BINARY;
             }

@@ -6,4 +6,4 @@ export CFLAGS="-O3"
 export CFLAGS="-O0"
 export CPPFLAGS="-Iintinclude -Iinclude"
 export LD=clang++
-export LDFLAGS="-Wl,-V"
+export LDFLAGS="-Wl,-V -Wl,-bMSGLEVEL=8"
