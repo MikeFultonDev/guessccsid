@@ -2,7 +2,6 @@
 #include <stdbool.h>
 #include <stdio.h>
 
-
 enum guessccsid_result guessccsid(const char* buffer, size_t len)
 {
   enum guessccsid_result result = CCSID_UNK;
