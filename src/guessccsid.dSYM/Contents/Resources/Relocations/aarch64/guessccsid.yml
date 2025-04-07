@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/fultonm/Documents/Development/guessccsid/src/guessccsid'
+relocations:     []
+...
