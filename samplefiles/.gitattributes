@@ -1,5 +1,6 @@
 *.ascii zos-working-tree-encoding=iso8859-1
-*.ebcdic zos-working-tree-encoding=ibm-1047
+*.japanese zos-working-tree-encoding=ibm-939
+*.spanish zos-working-tree-encoding=ibm-1145
+*.usa zos-working-tree-encoding=ibm-1047
 *.utf8 zos-working-tree-encoding=utf-8
-*.dbcs zos-working-tree-encoding=ibm-939
 *.png binary
